@@ -7,54 +7,54 @@
 */
 
 const utenti = [
-	{
-		id: 1,
-		nome: 'Mario',
-		cognome: 'Rossi',
-		eta: 28,
-		attivo: true,
-		città: 'Milano',
-	},
-	{
-		id: 2,
-		nome: 'Anna',
-		cognome: 'Bianchi',
-		eta: 35,
-		attivo: false,
-		città: 'Roma',
-	},
-	{
-		id: 3,
-		nome: 'Luca',
-		cognome: 'Verdi',
-		eta: 22,
-		attivo: true,
-		città: 'Milano',
-	},
-	{
-		id: 4,
-		nome: 'Sara',
-		cognome: 'Neri',
-		eta: 17,
-		attivo: true,
-		città: 'Torino',
-	},
-	{
-		id: 5,
-		nome: 'Marco',
-		cognome: 'Gialli',
-		eta: 45,
-		attivo: false,
-		città: 'Roma',
-	},
-	{
-		id: 6,
-		nome: 'Chiara',
-		cognome: 'Rosa',
-		eta: 30,
-		attivo: true,
-		città: 'Milano',
-	},
+    {
+        id: 1,
+        nome: 'Mario',
+        cognome: 'Rossi',
+        eta: 28,
+        attivo: true,
+        città: 'Milano',
+    },
+    {
+        id: 2,
+        nome: 'Anna',
+        cognome: 'Bianchi',
+        eta: 35,
+        attivo: false,
+        città: 'Roma',
+    },
+    {
+        id: 3,
+        nome: 'Luca',
+        cognome: 'Verdi',
+        eta: 22,
+        attivo: true,
+        città: 'Milano',
+    },
+    {
+        id: 4,
+        nome: 'Sara',
+        cognome: 'Neri',
+        eta: 17,
+        attivo: true,
+        città: 'Torino',
+    },
+    {
+        id: 5,
+        nome: 'Marco',
+        cognome: 'Gialli',
+        eta: 45,
+        attivo: false,
+        città: 'Roma',
+    },
+    {
+        id: 6,
+        nome: 'Chiara',
+        cognome: 'Rosa',
+        eta: 30,
+        attivo: true,
+        città: 'Milano',
+    },
 ];
 
 /* ESERCIZIO 1 — Arrow function compatta
@@ -86,7 +86,7 @@ const persona = {
     città: 'Roma'
 };
 
-const {nome, eta, città} = persona;
+const { nome, eta, città } = persona;
 
 console.log(nome, eta, città);
 
@@ -114,6 +114,12 @@ for (let i = 0; i < 3; i++) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const numeri = [1, 2, 3];
+const newNumeri = [...numeri];
+newNumeri.push(99);
+console.log(numeri);
+console.log(newNumeri);
+
 /* ESERCIZIO 5 — Spread per concatenare
    frutti  = ["mela", "banana"]
    verdure = ["carota", "spinaci"]
@@ -121,6 +127,13 @@ for (let i = 0; i < 3; i++) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const frutti = ["mela", "banana"];
+const verdure = ["carota", "spinaci"];
+
+const cibo = [...frutti, ...verdure];
+
+console.log(cibo);
 
 /* ESERCIZIO 6 — Spread su oggetto
    prodotto = { nome: "Cuffie", prezzo: 79.99 }
@@ -130,12 +143,21 @@ for (let i = 0; i < 3; i++) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const prodotto = { nome: "Cuffie", prezzo: 79.99 };
+const newProdotto = { ...prodotto, disponibile: true };
+
+console.log(newProdotto);
+
 /* ESERCIZIO 7 — forEach
    Stampa tutti gli utenti nel formato "- Nome Cognome (città)".
    Esempio: "- Mario Rossi (Milano)"
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+utenti.forEach((utente) => {
+    console.log(`- ${utente.nome} ${utente.cognome} (${utente.città})`);
+});
 
 /* ESERCIZIO 8 — map a stringhe
    Usa map per creare nomiCompleti = ["Mario Rossi", "Anna Bianchi", ...].
