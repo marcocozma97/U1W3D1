@@ -166,6 +166,10 @@ utenti.forEach((utente) => {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const nomiCompleti = utenti.map((utente) => `${utente.nome} ${utente.cognome}`);
+
+console.log(nomiCompleti);
+
 /* ESERCIZIO 9 — map a oggetti
    Usa map per creare utentiPlus: array di oggetti dove ogni utente ha tutte
    le properties originali + una nuova property "descrizione" con valore
@@ -176,6 +180,12 @@ utenti.forEach((utente) => {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const utentiPlus = utenti.map((utente) => {
+    return { ...utente, descrizione: `${utente.nome} ${utente.cognome}, ${utente.città}` };
+});
+
+console.log(utentiPlus[0]);
+
 /* ESERCIZIO 10 — filter attivi
    Usa filter per ottenere solo gli utenti con attivo: true.
    Stampa l'array risultante.
@@ -183,12 +193,20 @@ utenti.forEach((utente) => {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const attivi = utenti.filter((utente) => utente.attivo);
+
+console.log(attivi);
+
 /* ESERCIZIO 11 — filter combinato
    Usa filter per ottenere solo gli utenti maggiorenni (eta >= 18) che vivono a Milano.
    Stampa l'array risultante.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const maggiorenniMilano = utenti.filter((utente) => utente.eta >= 18 && utente.città === 'Milano');
+
+console.log(maggiorenniMilano);
 
 /* ESERCIZIO 12 — find
    Usa find per trovare il primo utente con id === 4.
