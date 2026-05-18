@@ -65,6 +65,12 @@ const utenti = [
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+
+const quadrato = (n) => n * n;
+
+console.log(quadrato(5));
+
+
 /* ESERCIZIO 2 — Destructuring di oggetto
    Crea un oggetto "persona" con almeno 4 properties (es. nome, cognome, eta, città).
    Estrai 3 properties in 3 variabili usando destructuring.
