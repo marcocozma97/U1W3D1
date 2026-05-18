@@ -215,12 +215,18 @@ console.log(maggiorenniMilano);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const utenteId4 = utenti.find((utente) => utente.id === 4);
+
+console.log(utenteId4);
+
 /* ESERCIZIO 13 — reduce
    a) Usa reduce per calcolare l'età media (somma età / numero utenti). Stampa.
    b) Usa reduce per contare il numero di utenti attivi. Stampa.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
 
 /* ESERCIZIO 14 — sort
    a) Ordina gli utenti per eta crescente. Stampa l'array di nomi nell'ordine.
