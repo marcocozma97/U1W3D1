@@ -79,6 +79,17 @@ console.log(quadrato(5));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const persona = {
+    nome: 'Giovanni',
+    cognome: 'Rossi',
+    eta: 28,
+    città: 'Roma'
+};
+
+const {nome, eta, città} = persona;
+
+console.log(nome, eta, città);
+
 /* ESERCIZIO 3 — Destructuring nei parametri
    Scrivi una arrow function "riepilogo" che riceve un utente e ritorna
    "Nome Cognome (eta anni)" usando destructuring nei parametri.
