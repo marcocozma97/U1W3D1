@@ -98,6 +98,14 @@ console.log(nome, eta, città);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const riepilogo = (user) => {
+    return `${user.nome} ${user.cognome} (${user.eta} anni)`;
+}
+
+for (let i = 0; i < 3; i++) {
+    console.log(riepilogo(utenti[i]));
+}
+
 /* ESERCIZIO 4 — Spread su array
    Crea numeri = [1, 2, 3].
    Crea una copia indipendente con spread, fai push(99) sulla copia.
